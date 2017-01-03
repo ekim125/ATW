@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATW</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <body>
+  	<nav class="navbar navbar-dark bg-inverse">
+  		<img src="https://lh3.googleusercontent.com/tQNvcdOONQIcdOWsNoOWfnwYKO8wmbf5efXWeVCICBaOd9MKjonEzo7J3vBkSMUh4tzQshNntv_SKOw=w1920-h887" href="/home"></a>
+  		<ul class="nav navbar-nav">
+  		<li class="nav-item dropdown">
+  				<a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> News</a>
+  				<div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+  					<a class="dropdown-item" href="/news">News</a>
+  					<a class="dropdown-item" href="/featured_articles">Featured Articles</a>
+  			<li class="nav-item dropdown">
+  				<a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Rankings</a>
+  				<div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+  					<a class="dropdown-item" href="/top_10_currently_airing">Top 10 Currently Airing</a>
+  					<a class="dropdown-item" href="/top_25_last_season">Top 25 Last Season</a>
+  					<a class="dropdown-item" href="/top_50_of_2016">Top 50 of 2016</a>
+  				</div>
+  			</li>
+  			<li class="nav-item dropdown">
+  				<a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Reviews</a>
+  				<div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+  					<a class="dropdown-item" href="/reviews">Reviews</a>
+  					<a class="dropdown-item" href="/recommendations">Recommendations</a>
+  				</div>
+  			</li>
+  			<li class="nav-item dropdown">
+  				<a class="nav-link dropdown-toggle" href="http://example.com" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Watch</a>
+  				<div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+  					<a class="dropdown-item" href="/custom_videos">Custom Videos</a>
+  					<a class="dropdown-item" href="/promo_videos">Promotional Videos</a>
+  				</div>
+  			</li>
+  			<li class="nav-item">
+            <%= link_to "About Us", about_us_path, class: "nav-link" %>
+    		</li>
+  		</ul>
+  		<form class="form-inline float-xs-right">
+  			<input class="form-control" type="text" placeholder="Search">
+  			<button class="btn btn-outline-success" type="submit">Search</button>
+  		</form>
+  	</nav>
+    <%= yield %>
+  </body>
+ 
+</html>
